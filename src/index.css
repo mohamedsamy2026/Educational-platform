@@ -1,0 +1,11 @@
+/* Import TailwindCSS Start */
+@import "tailwindcss";
+/* Import TailwindCSS End */
+
+
+/* المتغيرات والحاجات الاساسيه يبدأ */
+@theme{
+    --font-header:Verdana, Geneva, Tahoma, sans-serif;
+}
+/* المتغيرات والحاجات الاساسيه ينتهي */
+
