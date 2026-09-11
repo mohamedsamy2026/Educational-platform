@@ -1,11 +1,10 @@
 // Import IMG
-import HeroImg from "/assets/Background/hero-bg.webp";
-import MasterImg from "/assets/Master/Master transparent.png";
+import HeroImg from "../assets/Background/hero-bg.webp";
+import MasterImg from "../assets/Master/Master transparent.png";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-
+    <section className="relative min-h-screen flex items-center overflow-hidden ">
       {/* الخلفية التاريخية */}
       <div className="absolute inset-0 z-0">
         <img
@@ -34,10 +33,10 @@ export default function HeroSection() {
             </p>
 
             {/* الأزرار */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-end">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
               <a
                 href="/signup"
-                className="bg-gold text-midnight px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold-light transition-all duration-200 shadow-lg hover:shadow-gold/50"
+                className="bg-gold text-gray-100 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold-light transition-all duration-200 shadow-lg hover:shadow-gold/50"
               >
                 ابدأ التعلم
               </a>
@@ -58,8 +57,10 @@ export default function HeroSection() {
               <img
                 src={MasterImg}
                 alt="مستر محمد خالد"
-                className="relative w-full max-w-md h-auto object-contain drop-shadow-2xl"
+                className="relative w-full max-w-xl h-auto object-contain drop-shadow-2xl"
               />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4/5 h-12 bg-black/4عععع0 blur-2xl rounded-full pointer-events-none"></div>
+              <div className="absolute  bottom-0 left-0 right-0 bg-black/20 blur-3xl rounded-full"></div>
             </div>
           </div>
         </div>

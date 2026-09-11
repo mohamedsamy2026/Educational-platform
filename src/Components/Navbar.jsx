@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // Import IMG
-import logoImg from "/assets/Logo/transparent-Logo.png";
+import logoImg from "../assets/Logo/transparent-Logo.png";
 
 // Import Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
