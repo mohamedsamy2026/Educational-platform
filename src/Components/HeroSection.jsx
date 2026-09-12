@@ -3,17 +3,14 @@ import HeroImg from "../assets/Background/hero-bg.webp";
 
 export default function HeroSection() {
   return (
-    <section
-      dir="rtl"
-      className="relative min-h-screen flex items-center overflow-hidden"
-    >
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Start */}
       <div className="absolute inset-0 z-0">
-     <img
-  src={HeroImg}
-  alt="خلفية تاريخية"
-  className="w-full h-full object-cover object-[50%_center] lg:object-center"
-/>
+        <img
+          src={HeroImg}
+          alt="خلفية تاريخية"
+          className="w-full h-full object-cover object-[50%_center] lg:object-center"
+        />
 
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/45"></div>
@@ -62,10 +59,9 @@ export default function HeroSection() {
               </a>
             </div>
           </div>
+          {/*  Text End  */}
 
-          {/* ================= Text End ================= */}
-
-          {/* ================= Master Start ================= */}
+          {/*  Master Start  */}
 
           <div className="order-1 lg:order-2 relative flex items-center justify-center min-h-[450px] lg:min-h-[650px]">
             {/* Person */}
@@ -86,21 +82,20 @@ export default function HeroSection() {
       scale-120
       lg:translate-y-6
     "
-         style={{
-  WebkitMaskImage:
-    "linear-gradient(to bottom, black 88%, transparent 100%)",
-  maskImage:
-    "linear-gradient(to bottom, black 85%, transparent 100%)",
-}}
+                style={{
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, black 88%, transparent 100%)",
+                  maskImage:
+                    "linear-gradient(to bottom, black 85%, transparent 100%)",
+                }}
               />
             </div>
           </div>
 
-          {/* ================= Master End ================= */}
+          {/*  Master End */}
         </div>
       </div>
-
-      {/* ================= Content End ================= */}
+      {/*  Content End  */}
     </section>
   );
 }
