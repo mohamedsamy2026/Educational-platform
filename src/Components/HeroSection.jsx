@@ -3,7 +3,7 @@ import HeroImg from "../assets/Background/hero-bg.webp";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative w-auto flex items-center overflow-hidden">
       {/* Background Start */}
       <div className="absolute inset-0 z-0">
         <img
@@ -63,7 +63,7 @@ export default function HeroSection() {
 
           {/*  Master Start  */}
 
-          <div className="order-1 lg:order-2 relative flex items-center justify-center min-h-[450px] lg:min-h-[650px]">
+          <div className="hidden lg:flex order-1 lg:order-2 relative flex items-center justify-center min-h-[450px] lg:min-h-[650px]">
             {/* Person */}
 
             <div className="relative w-full max-w-xl lg:min-w-3xl flex justify-center items-start">
