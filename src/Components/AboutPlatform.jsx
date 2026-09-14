@@ -30,7 +30,7 @@ export default function AboutPlatform() {
       mb-4
     "
           >
-            عن المنصة
+            تعرف علي المنصة
           </h1>
 
           <h2
