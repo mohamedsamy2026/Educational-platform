@@ -18,6 +18,35 @@ export default function AboutPlatform() {
   return (
     <section dir="rtl" className="bg-midnight py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+        {/* ================= Section Heading ================= */}
+        <div className="text-center mb-12">
+          <h1
+            className="
+      text-3xl
+      sm:text-4xl
+      md:text-5xl
+      font-bold
+      text-warm-white
+      mb-4
+    "
+          >
+            عن المنصة
+          </h1>
+
+          <h2
+            className="
+      text-base
+      sm:text-lg
+      md:text-xl
+      text-gray-300
+      max-w-2xl
+      mx-auto
+      leading-8
+    "
+          >
+            نعمل على تقديم تجربة تعليمية مميزه تساعدك على فهم التاريخ بسهولة
+          </h2>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* ================= Card 1 ================= */}
           <div

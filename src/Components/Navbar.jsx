@@ -13,9 +13,8 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "الرئيسية", href: "#" },
-    { name: "الكورسات", href: "#courses" },
-    { name: "الامتحانات", href: "#exams" },
     { name: "من نحن", href: "#about" },
+    { name: "الكورسات", href: "#courses" },
     { name: "تواصل معنا", href: "#contact" },
   ];
 

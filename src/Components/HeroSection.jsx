@@ -3,7 +3,7 @@ import HeroImg from "../assets/Background/hero-bg.webp";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-auto flex items-center overflow-hidden">
+    <section id="heroSection" className="relative w-auto lg:py-0 pt-9 pb-0 flex items-center overflow-hidden">
       {/* Background Start */}
       <div className="absolute inset-0 z-0">
         <img
