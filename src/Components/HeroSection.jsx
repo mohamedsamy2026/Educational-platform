@@ -1,3 +1,6 @@
+// React Router
+import { Link } from "react-router-dom";
+
 import MasterImg from "../assets/Master/master-home.png";
 import HeroImg from "../assets/Background/hero-bg.webp";
 
@@ -44,15 +47,15 @@ export default function HeroSection() {
             {/* ================= Buttons ================= */}
 
             <div className="flex flex-col w-full sm:flex-row gap-4 justify-start items-start">
-              <a
-                href="/signup"
+              <Link
+                to="/signup"
                 className="bg-gold text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg transition-all duration-300hover:bg-gold-light sm:w-auto w-full"
               >
                 ابدأ التعلم
-              </a>
+              </Link>
 
               <a
-                href="/courses"
+                href="#courses"
                 className="border-2 border-gold text-gold px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:bg-gold hover:text-white sm:w-auto w-full"
               >
                 شاهد الكورسات

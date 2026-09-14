@@ -14,19 +14,6 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const scrollToSection = (sectionId) => {
-    const cleanId = sectionId.replace("#", "");
-    const element = document.getElementById(cleanId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-      // قفل المنيو في الموبايل بعد الضغط
-      setIsOpen(false);
-    }
-  };
-
   const navLinks = [
     { name: "الرئيسية", href: "#heroSection" },
     { name: "من نحن", href: "#aboutPlatform" },
@@ -56,34 +43,34 @@ export default function Navbar() {
           {/* Links Desktop Start*/}
           <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
-              <button
-                onClick={() => scrollToSection(link.href)}
+              <a
+                href={link.href}
                 key={link.name}
                 className="text-warm-white hover:text-gold transition-colors duration-200 font-bold bg-transparent cursor-pointer"
               >
                 {link.name}
-              </button>
+              </a>
             ))}
           </div>
           {/* Links Desktop End*/}
 
-          {/* LoigIN & SignUp Start */}
-          <div className="hidden lg:flex items-center gap-5">
+          {/* Login & SignUp Start */}
+          <div className="hidden lg:flex items-center gap-4">
             <Link
               to="/login"
-              className="bg-[#D4AF37] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#B8941F] transition-colors duration-200"
+              className="border-[2px] text-white border-gold  px-6 py-3 rounded-lg font-bold hover:bg-gold transition-colors duration-200"
             >
               تسجيل الدخول
             </Link>
 
             <Link
               to="/signup"
-              className="bg-[#D4AF37] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#B8941F] transition-colors duration-200"
+              className="bg-gold text-white  px-6 py-3.5 rounded-lg font-bold hover:bg-gold-light transition-colors duration-200"
             >
-              انشاء حساب
+              إنشاء حساب
             </Link>
           </div>
-          {/* LoigIN & SignUp End */}
+          {/* Login & SignUp End */}
 
           {/* Button(Mobile) Start */}
           <div className="lg:hidden mx-7">
@@ -120,13 +107,13 @@ export default function Navbar() {
           ))}
           <Link
             to="/login"
-            className="block mx-4 mb-6 mt-4 bg-[#D4AF37] text-white font-bold px-6 py-3 rounded-lg text-center hover:bg-[#B8941F] transition-colors"
+            className="block mx-4 mb-6 mt-4 border-2 border-[#D4AF37] text-white font-bold px-6 py-3 rounded-lg text-center hover:bg-[#D4AF37] transition-colors"
           >
             تسجيل الدخول
           </Link>
           <Link
             to="/signup"
-            className="block mx-4 mt-4 bg-[#D4AF37] text-white font-bold px-6 py-3 rounded-lg text-center hover:bg-[#B8941F] transition-colors"
+            className="block mx-4 mt-4 bg-[#D4AF37] text-white font-bold px-6 py-3.5 rounded-lg text-center hover:bg-[#B8941F] transition-colors"
           >
             انشاء حساب
           </Link>
