@@ -1,6 +1,11 @@
 // FontAswome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+// Icons
 import { faQuoteRight, faStar } from "@fortawesome/free-solid-svg-icons";
+
+// Background
+import TestimonialsBg from "../assets/Background/1.jpg";
 
 const testimonials = [
   {
@@ -10,6 +15,7 @@ const testimonials = [
     review:
       "شرح مستر محمد خالد بسيط وواضح جدًا، وبقيت أفهم الأحداث وأربط بينها بسهولة.",
   },
+
   {
     id: 2,
     name: "مروان محمد",
@@ -17,6 +23,7 @@ const testimonials = [
     review:
       "أكثر شيء عجبني هو طريقة عرض المعلومات، لأنها بتخلّي المذاكرة أسهل والمراجعة أسرع.",
   },
+
   {
     id: 3,
     name: "احمد اشرف",
@@ -28,9 +35,27 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section dir="rtl" className="bg-midnight py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/*  Section Heading Start  */}
+    <section
+      dir="rtl"
+      className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8"
+    >
+      {/* ================= Background Start ================= */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={TestimonialsBg}
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-center"
+        />
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-midnight/20"></div>
+      </div>
+      {/* ================= Background End ================= */}
+
+      {/* ================= Content Start ================= */}
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* ================= Section Heading Start ================= */}
         <div className="text-center mb-12">
           <h1
             className="
@@ -59,9 +84,9 @@ export default function Testimonials() {
             تجارب حقيقية من طلابنا عن رحلتهم في تعلم التاريخ
           </h2>
         </div>
-        {/*  Section Heading End  */}
+        {/* ================= Section Heading End ================= */}
 
-        {/*  Testimonials Start */}
+        {/* ================= Testimonials Start ================= */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((student) => (
             <div
@@ -69,12 +94,13 @@ export default function Testimonials() {
               className="
                 group
                 relative
-                bg-charcoal
+                bg-charcoal/95
                 border
                 border-border-navy
                 rounded-2xl
                 p-7
                 shadow-lg
+                backdrop-blur-sm
                 transition-all
                 duration-300
                 hover:-translate-y-2
@@ -170,8 +196,9 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
-        {/*  Testimonials End */}
+        {/* ================= Testimonials End ================= */}
       </div>
+      {/* ================= Content End ================= */}
     </section>
   );
 }
