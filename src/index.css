@@ -2,6 +2,11 @@
 @import "tailwindcss";
 /* Import TailwindCSS End */
 
+/* Smooth */
+html {
+  scroll-behavior: smooth;
+}
+
 /* الخط الريسي*/
 @import '@fontsource/cairo/400.css';
 @import '@fontsource/cairo/600.css';

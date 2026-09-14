@@ -49,7 +49,7 @@ const courses = [
 
 export default function LatestCourses() {
   return (
-    <section dir="rtl" className="bg-charcoal  py-20 px-4 sm:px-6 lg:px-8">
+    <section id="courses" dir="rtl" className="bg-charcoal  py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/*   Heading Start */}
         <div className="text-center mb-12">
@@ -64,7 +64,7 @@ export default function LatestCourses() {
         {/*   Heading End */}
 
         {/*  Courses Start */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="bg-midnight  grid grid-cols-1 lg:grid-cols-3 gap-6">
           {courses.map((course) => (
             <div
               key={course.id}

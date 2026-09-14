@@ -1,3 +1,6 @@
+// React Router
+import { Link } from "react-router-dom";
+
 // Hooks
 import { useState } from "react";
 
@@ -11,59 +14,74 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToSection = (sectionId) => {
+    const cleanId = sectionId.replace("#", "");
+    const element = document.getElementById(cleanId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      // قفل المنيو في الموبايل بعد الضغط
+      setIsOpen(false);
+    }
+  };
+
   const navLinks = [
-    { name: "الرئيسية", href: "#" },
-    { name: "من نحن", href: "#about" },
+    { name: "الرئيسية", href: "#heroSection" },
+    { name: "من نحن", href: "#aboutPlatform" },
     { name: "الكورسات", href: "#courses" },
     { name: "تواصل معنا", href: "#contact" },
   ];
 
   return (
     // Nav Links Start
-    <nav className="fixed top-0 left-0 right-0 z-100 backdrop-blur-sm bg-black/15">
-      <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 right-0 z-[100] backdrop-blur-sm bg-black/15">
+      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-22">
           {/* Logo Start */}
-          <div className="flex-shrink-0 flex items-center cursor-pointer mx-7">
-            <img
-              src={logoImg}
-              alt="الغازي في التاريخ"
-              style={{
-                width: "50px",
-              }}
-            />
-          </div>
+          <Link to="/">
+            <div className="flex-shrink-0 flex items-center cursor-pointer mx-7">
+              <img
+                src={logoImg}
+                alt="الغازي في التاريخ"
+                style={{
+                  width: "50px",
+                }}
+              />
+            </div>
+          </Link>
           {/* Logo End */}
 
           {/* Links Desktop Start*/}
           <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
-              <a
+              <button
+                onClick={() => scrollToSection(link.href)}
                 key={link.name}
-                href={link.href}
-                className="text-warm-white hover:text-gold transition-colors duration-200 font-bold"
+                className="text-warm-white hover:text-gold transition-colors duration-200 font-bold bg-transparent cursor-pointer"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
           </div>
           {/* Links Desktop End*/}
 
           {/* LoigIN & SignUp Start */}
           <div className="hidden lg:flex items-center gap-5">
-            <a
-              href="/login"
+            <Link
+              to="/login"
               className="bg-[#D4AF37] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#B8941F] transition-colors duration-200"
             >
               تسجيل الدخول
-            </a>
+            </Link>
 
-            <a
-              href="/login"
+            <Link
+              to="/signup"
               className="bg-[#D4AF37] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#B8941F] transition-colors duration-200"
             >
               انشاء حساب
-            </a>
+            </Link>
           </div>
           {/* LoigIN & SignUp End */}
 
@@ -92,26 +110,26 @@ export default function Navbar() {
           }`}
         >
           {navLinks.map((link) => (
-            <a
+            <button
               key={link.name}
-              href={link.href}
-              className="block px-4 py-[17px] text-warm-white font-bold hover:text-gold hover:bg-black/25 transition-colors"
+              onClick={() => scrollToSection(link.href)}
+              className="block w-full text-right px-4 py-[17px] text-warm-white font-bold hover:text-gold hover:bg-black/25 transition-colors bg-transparent"
             >
               {link.name}
-            </a>
+            </button>
           ))}
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="block mx-4 mb-6 mt-4 bg-[#D4AF37] text-white font-bold px-6 py-3 rounded-lg text-center hover:bg-[#B8941F] transition-colors"
           >
             تسجيل الدخول
-          </a>
-          <a
-            href="/login"
+          </Link>
+          <Link
+            to="/signup"
             className="block mx-4 mt-4 bg-[#D4AF37] text-white font-bold px-6 py-3 rounded-lg text-center hover:bg-[#B8941F] transition-colors"
           >
             انشاء حساب
-          </a>
+          </Link>
         </div>
         {/* Navbar Mobiles End*/}
       </div>
