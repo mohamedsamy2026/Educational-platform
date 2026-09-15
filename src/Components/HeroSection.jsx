@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import MasterImg from "../assets/Master/master-home.png";
-import HeroImg from "../assets/Background/hero-bg.webp";
+import MasterImg from "../assets/Master/master.png";
+import HeroImg from "../assets/Background/1.jpg";
 
 export default function HeroSection() {
   return (
@@ -15,7 +15,6 @@ export default function HeroSection() {
         py-11
         overflow-hidden
         flex items-center
-        bg-midnight
       "
     >
       {/*  Background Start */}
@@ -33,16 +32,14 @@ export default function HeroSection() {
         />
 
         {/* Main dark overlay */}
-        <div className="absolute inset-0 bg-black/40" />
 
         {/* Navy cinematic overlay */}
         <div
           className="
             absolute inset-0
             bg-gradient-to-l
-            from-[#061522]/95
-            via-[#071b2b]/65
-            to-[#030b12]/35
+            from-[#061522]/30
+  
           "
         />
 
@@ -55,7 +52,7 @@ export default function HeroSection() {
             h-44
             bg-gradient-to-t
             from-midnight
-            via-midnight/45
+            via-midnight/20
             to-transparent
           "
         />
@@ -319,7 +316,6 @@ export default function HeroSection() {
           {/*  Master Start */}
           <div
             className="
-              hidden
               lg:flex
               order-1
               relative
@@ -346,7 +342,9 @@ export default function HeroSection() {
               className="
                 relative
                 z-10
-                min-w-[750px]
+                lg:w-[500px]
+                w-[350px]
+                mx-auto
                 h-auto
                 drop-shadow-[0_25px_45px_rgba(0,0,0,0.45)]
                 translate-y-10
@@ -365,18 +363,7 @@ export default function HeroSection() {
       {/*  Content End  */}
 
       {/*  Bottom transition Start */}
-<div
-  className="
-    absolute
-    inset-x-0
-    bottom-0
-    h-32
-    bg-gradient-to-t
-    from-midnight
-    via-midnight/25
-    to-transparent
-  "
-/>
+
       {/*  Bottom transition End */}
     </section>
   );
