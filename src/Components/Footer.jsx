@@ -298,7 +298,7 @@ export default function Footer() {
               </div>
 
               <p className="mb-5 max-w-md text-sm leading-7 text-white/60">
-                لديك سؤال عن درس أو محتوى دراسي؟ تواصل معنا وسنساعدك.
+                لديك سؤال عن درس أو محتوى دراسي ؟ تواصل معنا وسنساعدك.
               </p>
 
               <div className="flex items-center gap-3">
@@ -374,7 +374,7 @@ export default function Footer() {
               </div>
 
               <p className="mb-5 max-w-md text-sm leading-7 text-white/60">
-                لديك مشكلة تقنية أو استفسار عن الحساب؟ تواصل معنا وسنساعدك.
+                لديك مشكلة تقنية في المنصه أو استفسار عن الحساب ؟ تواصل معنا وسنساعدك.
               </p>
 
               <div className="flex items-center gap-3">

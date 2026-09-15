@@ -48,7 +48,7 @@ export default function Navbar() {
   return (
     <nav
       className={`
-        fixed top-0 left-0 right-0 z-[100]
+        fixed top-0 left-0 right-0 z-80
         transition-all duration-500
         ${
           isScrolled
