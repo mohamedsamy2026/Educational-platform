@@ -71,8 +71,8 @@ export default function Navbar() {
                 src={logoImg}
                 alt="الغازي في التاريخ"
                 className="
-                  w-14 h-14
-                  lg:w-[68px] lg:h-[68px]
+                  w-11 h-11
+                  lg:w-[77px] lg:h-[77px]
                   object-contain
                   transition-transform duration-300
                   group-hover:scale-105
@@ -161,13 +161,12 @@ export default function Navbar() {
               w-11 h-11
               flex items-center justify-center
               rounded-lg
-              border border-white/10
-              bg-black/20
+              bg-gold
+              cursor-pointer
               text-warm-white
-              text-xl
+              text-[22px]
               transition-all duration-300
-              hover:border-gold/50
-              hover:text-gold
+              hover:bg-gold/89
             "
           >
             <FontAwesomeIcon icon={isOpen ? faXmark : faBars} />
