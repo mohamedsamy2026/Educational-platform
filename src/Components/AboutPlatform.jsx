@@ -16,7 +16,11 @@ import {
 
 export default function AboutPlatform() {
   return (
-    <section dir="rtl" id="aboutPlatform" className="bg-midnight py-20 px-4 sm:px-6 lg:px-8">
+    <section
+      dir="rtl"
+      id="aboutPlatform"
+      className="bg-midnight py-20 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-7xl mx-auto">
         {/* ================= Section Heading ================= */}
         <div className="text-center mb-12">
@@ -163,6 +167,7 @@ export default function AboutPlatform() {
           {/* ================= Platform Card ================= */}
           <div
             className="
+            md:col-span-2 md:justify-self-center md:w-[calc(60%-12px)] lg:col-span-1 lg:w-full
               bg-charcoal
               border
               border-border-navy

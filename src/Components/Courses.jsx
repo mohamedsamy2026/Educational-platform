@@ -69,6 +69,7 @@ export default function LatestCourses() {
             <div
               key={course.id}
               className="group bg-midnight border border-border-navy rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer hover:scale-[1.01] hover:border-gold hover:shadow-[0_20px_45px_rgba(212,175,55,0.2)] flex flex-col h-full"
+              
             >
               {/*  Course Image Start  */}
               <div className="relative aspect-video overflow-hidden bg-midnight">
@@ -129,6 +130,7 @@ export default function LatestCourses() {
                   <FontAwesomeIcon icon={faArrowLeft} />
                 </a>
               </div>
+              
               {/*  Course Content End */}
             </div>
           ))}

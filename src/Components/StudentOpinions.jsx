@@ -92,7 +92,8 @@ export default function Testimonials() {
           {testimonials.map((student) => (
             <div
               key={student.id}
-              className="
+              className={`
+              
                 group
                 relative
                 bg-charcoal/95
@@ -100,6 +101,7 @@ export default function Testimonials() {
                 border-border-navy
                 rounded-2xl
                 p-7
+                cursor-pointer
                 shadow-lg
                 backdrop-blur-sm
                 transition-all
@@ -107,7 +109,8 @@ export default function Testimonials() {
                 hover:-translate-y-2
                 hover:border-gold
                 hover:shadow-[0_18px_40px_rgba(212,175,55,0.18)]
-              "
+                ${student.id == 3 ? "md:col-span-2 md:justify-self-center md:w-[calc(60%-12px)] lg:col-span-1 lg:w-full" : ""}
+              `}
             >
               {/* Quote Icon */}
               <div
