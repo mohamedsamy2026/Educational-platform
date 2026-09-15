@@ -1,5 +1,6 @@
 // FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import MasterFooter from "../assets/Master/master no transparent.jpeg";
 
 // Icons
@@ -7,7 +8,6 @@ import {
   faFacebookF,
   faInstagram,
   faTiktok,
-  faYoutube,
   faTelegram,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
@@ -21,90 +21,205 @@ export default function Footer() {
     <footer
       id="footer"
       dir="rtl"
-      className="relative bg-midnight border-t border-gold/30 pt-16 pb-6 px-4 sm:px-6 lg:px-8"
+      className="
+        relative
+        overflow-hidden
+        border-t
+        border-gold/20
+        bg-midnight
+        px-4
+        pb-6
+        pt-20
+        sm:px-6
+        lg:px-8
+      "
     >
-      <div className="max-w-7xl mx-auto">
-        {/*  Main Footer Start */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-15">
+      {/* Background Decorations */}
+      <div className="pointer-events-none absolute right-1/2 top-0 h-72 w-72 translate-x-1/2 rounded-full bg-gold/5 blur-[120px]" />
 
-          {/*  Platform Info Start */}
-          <div className="sm:border-0 border-navy sm:pb-0 pb-3 border-b-2">
-            <div className="flex items-center gap-4 mb-5">
-              <img
-                src={MasterFooter}
-                alt="مستر محمد خالد"
-                className="w-16 h-16 shrink-0 rounded-full object-cover border-2 border-gold shadow-lg"
-              />
+      <div className="pointer-events-none absolute bottom-0 left-0 h-64 w-64 rounded-full bg-[#10243a]/40 blur-[100px]" />
 
-              <h2 className="text-2xl font-bold text-gold">
-                الغازي في التاريخ
-              </h2>
+      <div className="relative z-10 mx-auto max-w-7xl">
+        {/* Main Footer Start */}
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+          {/* Platform Info Start */}
+          <div className="lg:col-span-5">
+            <div className="mb-6 flex items-center gap-4">
+              <div className="relative">
+                <div className="absolute inset-0 rounded-full bg-gold/10 blur-xl" />
+
+                <img
+                  src={MasterFooter}
+                  alt="مستر محمد خالد"
+                  className="
+                    relative
+                    h-16
+                    w-16
+                    shrink-0
+                    rounded-full
+                    border-2
+                    border-gold/70
+                    object-cover
+                    shadow-[0_10px_30px_rgba(0,0,0,0.30)]
+                  "
+                />
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-extrabold text-gold">
+                  الغازي في التاريخ
+                </h2>
+
+                <span className="mt-1 block text-xs font-semibold text-white/40">
+                  منصة تعليم التاريخ
+                </span>
+              </div>
             </div>
 
-            <p className="text-[#d9d5cc] leading-8 text-sm sm:text-base max-w-sm">
+            <p className="max-w-lg text-sm leading-8 text-white/60 sm:text-base">
               منصة تعليمية تهدف إلى تقديم شرح مبسط ومميز لمادة التاريخ والدراسات
               الاجتماعية مع مستر محمد خالد.
             </p>
 
-            <p className="mt-5 text-white font-semibold leading-7">
-              نتعلم التاريخ لنفهم الحاضر ونصنع المستقبل.
-            </p>
+            <div className="mt-6 flex items-center gap-3">
+              <span className="h-px w-10 bg-gold/50" />
+              <p className="text-sm font-bold leading-7 text-white/80">
+                نتعلم التاريخ لنفهم الحاضر ونصنع المستقبل.
+              </p>
+            </div>
           </div>
-          {/*  Platform Info End */}
+          {/* Platform Info End */}
 
-          {/*  Quick Links Start  */}
-          <div className="lg:ms-20 sm:border-0 border-navy sm:pb-0 pb-3 border-b-2">
-            <h3 className="text-xl font-bold text-warm-white mb-6">
-              روابط سريعة
-            </h3>
+          {/* Quick Links Start */}
+          <div className="lg:col-span-3">
+            <div className="mb-6 flex items-center gap-3">
+              <span className="h-8 w-1 rounded-full bg-gold" />
+
+              <h3 className="text-xl font-extrabold text-warm-white">
+                روابط سريعة
+              </h3>
+            </div>
 
             <div className="space-y-4">
               <a
                 href="#heroSection"
-                className="block text-[#d9d5cc] hover:text-gold transition-colors duration-200"
+                className="
+                  group
+                  flex
+                  items-center
+                  gap-3
+                  text-sm
+                  font-semibold
+                  text-white/60
+                  transition-colors
+                  duration-200
+                  hover:text-gold
+                "
               >
+                <span className="h-1 w-1 rounded-full bg-white/30 transition-all duration-200 group-hover:w-2 group-hover:bg-gold" />
                 الرئيسية
               </a>
 
               <a
                 href="#aboutPlatform"
-                className="block text-[#d9d5cc] hover:text-gold transition-colors duration-200"
+                className="
+                  group
+                  flex
+                  items-center
+                  gap-3
+                  text-sm
+                  font-semibold
+                  text-white/60
+                  transition-colors
+                  duration-200
+                  hover:text-gold
+                "
               >
-                تعرف على المنصة
+                <span className="h-1 w-1 rounded-full bg-white/30 transition-all duration-200 group-hover:w-2 group-hover:bg-gold" />
+                تعرّف على المنصة
               </a>
 
               <a
                 href="#courses"
-                className="block text-[#d9d5cc] hover:text-gold transition-colors duration-200"
+                className="
+                  group
+                  flex
+                  items-center
+                  gap-3
+                  text-sm
+                  font-semibold
+                  text-white/60
+                  transition-colors
+                  duration-200
+                  hover:text-gold
+                "
               >
+                <span className="h-1 w-1 rounded-full bg-white/30 transition-all duration-200 group-hover:w-2 group-hover:bg-gold" />
                 الكورسات
               </a>
 
               <a
                 href="#StudentOpinions"
-                className="block text-[#d9d5cc] hover:text-gold transition-colors duration-200"
+                className="
+                  group
+                  flex
+                  items-center
+                  gap-3
+                  text-sm
+                  font-semibold
+                  text-white/60
+                  transition-colors
+                  duration-200
+                  hover:text-gold
+                "
               >
+                <span className="h-1 w-1 rounded-full bg-white/30 transition-all duration-200 group-hover:w-2 group-hover:bg-gold" />
                 آراء الطلاب
               </a>
             </div>
           </div>
-          {/*  Quick Links End  */}
+          {/* Quick Links End */}
 
-          {/*  Follow Us Start */}
-          <div className="sm:border-0 border-navy sm:pb-0 pb-3 border-b-2">
-            <h3 className="text-xl font-bold text-warm-white mb-4">تابعنا</h3>
+          {/* Follow Us Start */}
+          <div className="lg:col-span-4">
+            <div className="mb-6 flex items-center gap-3">
+              <span className="h-8 w-1 rounded-full bg-gold" />
 
-            <p className="text-[#d9d5cc] leading-7 text-sm mb-6">
+              <h3 className="text-xl font-extrabold text-warm-white">
+                تابعنا
+              </h3>
+            </div>
+
+            <p className="mb-6 max-w-sm text-sm leading-7 text-white/60">
               تابع مستر محمد خالد على مواقع التواصل الاجتماعي.
             </p>
 
-            <div className="flex flex-wrap items-center gap-5">
+            <div className="flex flex-wrap items-center gap-3">
               {/* Facebook */}
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.facebook.com/share/19RrYLGj8s/"
                 aria-label="فيسبوك"
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-charcoal border-2 border-border-navy text-white text-xl transition-all duration-300 hover:bg-gold hover:text-midnight hover:border-gold hover:-translate-y-1"
+                className="
+                  flex
+                  h-11
+                  w-11
+                  items-center
+                  justify-center
+                  rounded-xl
+                  border
+                  border-white/10
+                  bg-charcoal
+                  text-lg
+                  text-white/70
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:border-gold
+                  hover:bg-gold
+                  hover:text-midnight
+                "
               >
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
@@ -112,9 +227,28 @@ export default function Footer() {
               {/* Instagram */}
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.instagram.com/mhmdkhldltnyn?stkn=MXhzM3ludzB1MzVzdg=="
                 aria-label="إنستجرام"
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-charcoal border-2 border-border-navy text-white text-xl transition-all duration-300 hover:bg-gold hover:text-midnight hover:border-gold hover:-translate-y-1"
+                className="
+                  flex
+                  h-11
+                  w-11
+                  items-center
+                  justify-center
+                  rounded-xl
+                  border
+                  border-white/10
+                  bg-charcoal
+                  text-lg
+                  text-white/70
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:border-gold
+                  hover:bg-gold
+                  hover:text-midnight
+                "
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
@@ -122,34 +256,77 @@ export default function Footer() {
               {/* TikTok */}
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.tiktok.com/@mr..mohamed.khaled?_r=1&_t=ZS-99VfIpXBVsj"
                 aria-label="تيك توك"
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-charcoal border-2 border-border-navy text-white text-xl transition-all duration-300 hover:bg-gold hover:text-midnight hover:border-gold hover:-translate-y-1"
+                className="
+                  flex
+                  h-11
+                  w-11
+                  items-center
+                  justify-center
+                  rounded-xl
+                  border
+                  border-white/10
+                  bg-charcoal
+                  text-lg
+                  text-white/70
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:border-gold
+                  hover:bg-gold
+                  hover:text-midnight
+                "
               >
                 <FontAwesomeIcon icon={faTiktok} />
               </a>
             </div>
           </div>
-          {/*  Follow Us End */}
+          {/* Follow Us End */}
 
+          {/* Support Area Start */}
+          <div className="grid grid-cols-1 gap-10 border-t border-white/5 pt-10 sm:col-span-2 lg:col-span-12 lg:grid-cols-2 lg:gap-16">
+            {/* Scientific Support Start */}
+            <div>
+              <div className="mb-5 flex items-center gap-3">
+                <span className="h-8 w-1 rounded-full bg-gold" />
 
-            {/*  Scientific Support Start */}
-            <div className="sm:border-0 border-navy sm:pb-0 pb-3 border-b-2">
-              <h3 className="text-xl font-bold text-warm-white mb-4">
-                الدعم العلمي
-              </h3>
+                <h3 className="text-xl font-extrabold text-warm-white">
+                  الدعم العلمي
+                </h3>
+              </div>
 
-              <p className="text-[#d9d5cc] leading-7 text-sm mb-5">
+              <p className="mb-5 max-w-md text-sm leading-7 text-white/60">
                 لديك سؤال عن درس أو محتوى دراسي؟ تواصل معنا وسنساعدك.
               </p>
 
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-3">
                 {/* WhatsApp */}
                 <a
                   href="https://wa.me/201006254308"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white h-12 w-12 rounded-full flex justify-center items-center border-2 bg-charcoal text-xl border-border-navy text-center hover:bg-[#25D366] hover:border-0 duration-300 hover:-translate-y-1"
+                  aria-label="واتساب"
+                  className="
+                    flex
+                    h-11
+                    w-11
+                    items-center
+                    justify-center
+                    rounded-xl
+                    border
+                    border-white/10
+                    bg-charcoal
+                    text-lg
+                    text-white/70
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:border-[#25D366]
+                    hover:bg-[#25D366]
+                    hover:text-white
+                  "
                 >
                   <FontAwesomeIcon icon={faWhatsapp} />
                 </a>
@@ -159,32 +336,73 @@ export default function Footer() {
                   href="https://t.me/mohamed25721"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white h-12 w-12 rounded-full flex justify-center items-center border-2 bg-charcoal text-xl border-border-navy text-center hover:bg-[#229ED9] hover:border-0 duration-300 hover:-translate-y-1"
+                  aria-label="تليجرام"
+                  className="
+                    flex
+                    h-11
+                    w-11
+                    items-center
+                    justify-center
+                    rounded-xl
+                    border
+                    border-white/10
+                    bg-charcoal
+                    text-lg
+                    text-white/70
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:border-[#229ED9]
+                    hover:bg-[#229ED9]
+                    hover:text-white
+                  "
                 >
                   <FontAwesomeIcon icon={faTelegram} />
                 </a>
               </div>
             </div>
-            {/*  Scientific Support End */}
+            {/* Scientific Support End */}
 
-            {/*  Technical Support Start */}
+            {/* Technical Support Start */}
             <div>
-              <h3 className="text-xl font-bold text-warm-white mb-4">
-                الدعم الفني
-              </h3>
+              <div className="mb-5 flex items-center gap-3">
+                <span className="h-8 w-1 rounded-full bg-gold" />
 
-              <p className="text-[#d9d5cc] leading-7 text-sm mb-5">
+                <h3 className="text-xl font-extrabold text-warm-white">
+                  الدعم الفني
+                </h3>
+              </div>
+
+              <p className="mb-5 max-w-md text-sm leading-7 text-white/60">
                 لديك مشكلة تقنية أو استفسار عن الحساب؟ تواصل معنا وسنساعدك.
               </p>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 {/* WhatsApp */}
                 <a
                   href="https://wa.me/201115083459"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="واتساب"
-                  className="text-white h-12 w-12 rounded-full flex justify-center items-center border-2 bg-charcoal text-xl border-border-navy text-center hover:bg-[#25D366] hover:border-0 duration-300 hover:-translate-y-1"
+                  className="
+                    flex
+                    h-11
+                    w-11
+                    items-center
+                    justify-center
+                    rounded-xl
+                    border
+                    border-white/10
+                    bg-charcoal
+                    text-lg
+                    text-white/70
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:border-[#25D366]
+                    hover:bg-[#25D366]
+                    hover:text-white
+                  "
                 >
                   <FontAwesomeIcon icon={faWhatsapp} />
                 </a>
@@ -195,42 +413,109 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="تليجرام"
-                  className="text-white h-12 w-12 rounded-full flex justify-center items-center border-2 bg-charcoal text-xl border-border-navy text-center hover:bg-[#229ED9] hover:border-0 duration-300 hover:-translate-y-1"
+                  className="
+                    flex
+                    h-11
+                    w-11
+                    items-center
+                    justify-center
+                    rounded-xl
+                    border
+                    border-white/10
+                    bg-charcoal
+                    text-lg
+                    text-white/70
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:border-[#229ED9]
+                    hover:bg-[#229ED9]
+                    hover:text-white
+                  "
                 >
                   <FontAwesomeIcon icon={faTelegram} />
                 </a>
 
+                {/* Email */}
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=mohamedeng747@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="البريد الإلكتروني"
-                  className="text-white h-12 w-12 rounded-full flex justify-center items-center border-2 bg-charcoal text-xl border-border-navy text-center hover:bg-gold hover:border-0 duration-300 hover:-translate-y-1"
+                  className="
+                    flex
+                    h-11
+                    w-11
+                    items-center
+                    justify-center
+                    rounded-xl
+                    border
+                    border-white/10
+                    bg-charcoal
+                    text-lg
+                    text-white/70
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:border-gold
+                    hover:bg-gold
+                    hover:text-midnight
+                  "
                 >
                   <FontAwesomeIcon icon={faEnvelope} />
                 </a>
               </div>
             </div>
-            {/*  Technical Support End */}
+            {/* Technical Support End */}
+          </div>
+          {/* Support Area End */}
         </div>
-        {/*  Main Footer End */}
+        {/* Main Footer End */}
 
-        {/*  Bottom Footer Start */}
-        <div className="border-t border-border-navy mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-6 text-center">
-          <p className="text-[#d9d5cc] font-bold text-sm md:order-1 order-2">
+        {/* Bottom Footer Start */}
+        <div
+          className="
+            mt-14
+            flex
+            flex-col
+            items-center
+            justify-between
+            gap-5
+            border-t
+            border-white/10
+            pt-6
+            text-center
+            md:flex-row
+            md:text-right
+          "
+        >
+          <p className="order-2 text-xs font-semibold text-white/40 md:order-1 sm:text-sm">
             الغازي في التاريخ - جميع الحقوق محفوظة © 2026
           </p>
 
           <a
             href="#heroSection"
-            className="md:order-2 order-1 flex items-center gap-2 text-sm text-[#d9d5cc]font-bold hover:text-gold transition-colors duration-200"
+            className="
+              order-1
+              flex
+              items-center
+              gap-2
+              text-xs
+              font-bold
+              text-white/50
+              transition-colors
+              duration-200
+              hover:text-gold
+              md:order-2
+              sm:text-sm
+            "
           >
             <span>العودة إلى الرئيسية</span>
 
             <FontAwesomeIcon icon={faArrowLeft} />
           </a>
         </div>
-        {/*  Bottom Footer End */}
+        {/* Bottom Footer End */}
       </div>
     </footer>
     // Footer End

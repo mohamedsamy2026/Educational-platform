@@ -1,11 +1,8 @@
-// FontAswome Icons
+// FontAwesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Icons
 import { faQuoteRight, faStar } from "@fortawesome/free-solid-svg-icons";
-
-// Background
-import TestimonialsBg from "../assets/Background/1.jpg";
 
 const testimonials = [
   {
@@ -15,7 +12,6 @@ const testimonials = [
     review:
       "شرح مستر محمد خالد بسيط وواضح جدًا، وبقيت أفهم الأحداث وأربط بينها بسهولة.",
   },
-
   {
     id: 2,
     name: "مروان محمد",
@@ -23,7 +19,6 @@ const testimonials = [
     review:
       "أكثر شيء عجبني هو طريقة عرض المعلومات، لأنها بتخلّي المذاكرة أسهل والمراجعة أسرع.",
   },
-
   {
     id: 3,
     name: "احمد اشرف",
@@ -33,176 +28,220 @@ const testimonials = [
   },
 ];
 
-export default function Testimonials() {
+export default function StudentOpinions() {
   return (
     <section
       dir="rtl"
       id="StudentOpinions"
-      className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8"
+      className="
+        relative
+        overflow-hidden
+        bg-midnight
+        px-4
+        py-24
+        sm:px-6
+        lg:px-8
+      "
     >
-      {/* ================= Background Start ================= */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={TestimonialsBg}
-          alt=""
-          aria-hidden="true"
-          className="w-full h-full object-cover object-center"
-        />
+      {/* =========================================================
+          Background Decoration
+      ========================================================= */}
 
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-midnight/20"></div>
-      </div>
-      {/* ================= Background End ================= */}
+      <div className="pointer-events-none absolute right-1/2 top-20 h-72 w-72 translate-x-1/2 rounded-full bg-gold/5 blur-[120px]" />
 
-      {/* ================= Content Start ================= */}
-      <div className="relative z-10 max-w-7xl mx-auto">
-        {/* ================= Section Heading Start ================= */}
-        <div className="text-center mb-12">
-          <h1
-            className="
-              text-3xl
-              sm:text-4xl
-              md:text-5xl
-              font-bold
-              text-warm-white
-              mb-4
-            "
-          >
+      <div className="pointer-events-none absolute left-0 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-[#10243a]/50 blur-[100px]" />
+
+      {/* =========================================================
+          Content
+      ========================================================= */}
+
+      <div className="relative z-10 mx-auto max-w-7xl">
+        {/* =======================================================
+            Section Heading
+        ======================================================= */}
+
+        <div className="mx-auto mb-14 max-w-2xl text-center">
+          <div className="mb-4 flex items-center justify-center gap-3">
+            <span className="h-px w-10 bg-gradient-to-l from-gold to-transparent" />
+
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold">
+              تجارب الطلاب
+            </span>
+
+            <span className="h-px w-10 bg-gradient-to-r from-gold to-transparent" />
+          </div>
+
+          <h2 className="mb-4 text-3xl font-extrabold leading-tight text-warm-white sm:text-4xl md:text-5xl">
             آراء طلابنا
-          </h1>
-
-          <h2
-            className="
-              text-base
-              sm:text-lg
-              md:text-xl
-              text-gray-300
-              max-w-2xl
-              mx-auto
-              leading-8
-            "
-          >
-            تجارب حقيقية من طلابنا عن رحلتهم في تعلم التاريخ
           </h2>
-        </div>
-        {/* ================= Section Heading End ================= */}
 
-        {/* ================= Testimonials Start ================= */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <p className="text-sm leading-8 text-white/60 sm:text-base">
+            تجارب حقيقية من طلابنا عن رحلتهم في تعلم التاريخ
+          </p>
+        </div>
+
+        {/* =======================================================
+            Testimonials
+        ======================================================= */}
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((student) => (
-            <div
+            <article
               key={student.id}
-              className={`
-              
+              className="
                 group
                 relative
-                bg-charcoal/95
-                border
-                border-border-navy
+                flex
+                h-full
+                flex-col
+                overflow-hidden
                 rounded-2xl
+                border
+                border-white/10
+                bg-charcoal/70
                 p-7
-                cursor-pointer
-                shadow-lg
                 backdrop-blur-sm
                 transition-all
                 duration-300
-                hover:-translate-y-2
-                hover:border-gold
-                hover:shadow-[0_18px_40px_rgba(212,175,55,0.18)]
-                ${student.id == 3 ? "md:col-span-2 md:justify-self-center md:w-[calc(60%-12px)] lg:col-span-1 lg:w-full" : ""}
-              `}
+                hover:-translate-y-1
+                hover:border-gold/30
+                hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)]
+              "
             >
-              {/* Quote Icon */}
+              {/* Top Gold Accent */}
               <div
                 className="
                   absolute
-                  top-6
+                  right-0
+                  top-8
+                  h-12
+                  w-1
+                  rounded-l-full
+                  bg-gold/70
+                "
+              />
+
+              {/* Quote Icon */}
+
+              <div
+                className="
+                  absolute
                   left-6
-                  w-10
-                  h-10
+                  top-6
                   flex
+                  h-11
+                  w-11
                   items-center
                   justify-center
-                  rounded-full
-                  bg-gold/10
+                  rounded-xl
+                  border
+                  border-gold/15
+                  bg-gold/5
                   text-gold
+                  transition-all
+                  duration-300
+                  group-hover:border-gold/30
+                  group-hover:bg-gold/10
                 "
               >
-                <FontAwesomeIcon icon={faQuoteRight} />
+                <FontAwesomeIcon icon={faQuoteRight} className="text-sm" />
               </div>
 
-              {/* Student Header */}
-              <div className="flex items-center gap-4 mb-6">
-                {/* Initials Circle */}
+              {/* =================================================
+                  Review
+              ================================================= */}
+
+              <div className="relative mb-8 w-[86%]">
+                <p
+                  className="
+                    text-sm
+                    leading-8
+                    text-white/75
+                    sm:text-base
+                  "
+                >
+                  {student.review}
+                </p>
+              </div>
+
+              {/* Divider */}
+
+              <div className="mb-6 h-px w-full bg-gradient-to-l from-transparent via-white/10 to-transparent" />
+
+              {/* =================================================
+                  Student Info
+              ================================================= */}
+
+              <div className="mt-auto flex items-center gap-4">
+                {/* Initials */}
+
                 <div
                   className="
-                    w-16
-                    h-16
-                    shrink-0
-                    rounded-full
                     flex
+                    h-14
+                    w-14
+                    shrink-0
                     items-center
                     justify-center
+                    rounded-xl
+                    border
+                    border-gold/30
                     bg-gradient-to-br
-                    from-gold
-                    to-[#b08d20]
-                    text-midnight
-                    text-lg
-                    sm:text-xl
+                    from-gold/20
+                    to-gold/5
+                    text-base
                     font-extrabold
-                    border-2
-                    border-gold-light
-                    shadow-lg
+                    text-gold
+                    shadow-[0_8px_20px_rgba(0,0,0,0.15)]
                   "
                 >
                   {student.initials}
                 </div>
 
-                {/* Student Name */}
+                {/* Name */}
+
                 <div>
                   <h3
                     className="
-                      text-lg
-                      sm:text-xl
-                      font-bold
+                      text-base
+                      font-extrabold
                       text-warm-white
+                      transition-colors
+                      duration-300
+                      group-hover:text-gold
+                      sm:text-lg
                     "
                   >
                     {student.name}
                   </h3>
 
-                  <span className="text-sm text-muted-gray">
+                  <span className="text-xs text-white/40 sm:text-sm">
                     من طلاب مستر محمد خالد
                   </span>
                 </div>
               </div>
 
-              {/* Stars */}
-              <div className="flex items-center gap-1 mb-5 text-[#F4C430]">
+              {/* =================================================
+                  Stars
+              ================================================= */}
+
+              <div className="mt-5 flex items-center gap-1 text-sm text-gold/90">
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
               </div>
-
-              {/* Review */}
-              <p
-                className="
-                  text-gray-200
-                  text-sm
-                  sm:text-base
-                  leading-8
-                "
-              >
-                {student.review}
-              </p>
-            </div>
+            </article>
           ))}
         </div>
-        {/* ================= Testimonials End ================= */}
       </div>
-      {/* ================= Content End ================= */}
+
+      {/* =========================================================
+          Bottom Line
+      ========================================================= */}
+
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/15 to-transparent" />
     </section>
   );
 }
