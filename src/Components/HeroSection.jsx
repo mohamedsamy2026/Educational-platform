@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import MasterImg from "../assets/Master/master.png";
+import MasterImg from "../assets/Master/master.webp";
 import HeroImg from "../assets/Background/1.jpg";
 
 export default function HeroSection() {
@@ -37,7 +37,7 @@ export default function HeroSection() {
             absolute inset-0
             bg-gradient-to-r
             lg:bg-gradient-to-l
-            from-[#061522]/25
+            from-[#061522]/40
           "
         />
 
