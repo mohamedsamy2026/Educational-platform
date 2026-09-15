@@ -6,7 +6,7 @@ import HeroImg from "../assets/Background/1.jpg";
 export default function HeroSection() {
   return (
     <section
-      dir="ltr"
+      dir="rtl"
       id="heroSection"
       className="
         relative
@@ -31,19 +31,17 @@ export default function HeroSection() {
           "
         />
 
-        {/* Main dark overlay */}
-
         {/* Navy cinematic overlay */}
         <div
           className="
             absolute inset-0
-            bg-gradient-to-l
-            from-[#061522]/30
-  
+            bg-gradient-to-r
+            lg:bg-gradient-to-l
+            from-[#061522]/25
           "
         />
 
-        {/* Bottom fade */}
+        {/* Bottom fade  */}
         <div
           className="
             absolute
@@ -57,7 +55,7 @@ export default function HeroSection() {
           "
         />
 
-        {/* Subtle gold glow */}
+        {/* Subtle gold glow مهمه */}
         <div
           className="
             absolute
@@ -70,6 +68,7 @@ export default function HeroSection() {
             blur-[120px]
           "
         />
+        
       </div>
       {/*  Background End */}
 
@@ -124,7 +123,7 @@ export default function HeroSection() {
           className="
             grid
             grid-cols-1
-            lg:grid-cols-2
+            md:grid-cols-2
             items-center
             gap-8
             lg:gap-2
@@ -134,12 +133,12 @@ export default function HeroSection() {
           <div
             className="
               order-1
-              lg:order-2
+              md:order-2
               text-right
               lg:max-w-2xl
               max-w-7xl
-              lg:pr-4
-              xl:pr-8
+              lg:pl-4
+              xl:pl-8
             "
           >
             {/* Small label */}
@@ -202,8 +201,8 @@ export default function HeroSection() {
             </h1>
 
             {/* Gold separator */}
-            <div className="flex items-center justify-end gap-3 mb-6">
-              <div className="w-20 h-px bg-gradient-to-l from-gold to-transparent" />
+            <div className="flex items-center justify-start gap-3 mb-6">
+              <div className="w-20 h-px bg-gradient-to-r from-gold to-transparent" />
               <div className="w-2 h-2 rotate-45 bg-gold" />
               <div className="w-8 h-px bg-gold/50" />
             </div>
@@ -233,7 +232,7 @@ export default function HeroSection() {
                 flex
                 flex-col
                 sm:flex-row
-                justify-end
+                justify-start
                 sm:items-center
                 gap-3
               "
@@ -295,7 +294,7 @@ export default function HeroSection() {
                 mt-10
                 flex
                 items-center
-                justify-end
+                justify-start
                 gap-3
                 text-xs
                 sm:text-sm
@@ -318,6 +317,7 @@ export default function HeroSection() {
             className="
               lg:flex
               order-1
+              md:order-2
               relative
               items-center
               justify-center
@@ -361,10 +361,6 @@ export default function HeroSection() {
         </div>
       </div>
       {/*  Content End  */}
-
-      {/*  Bottom transition Start */}
-
-      {/*  Bottom transition End */}
     </section>
   );
 }
