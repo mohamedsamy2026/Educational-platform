@@ -18,8 +18,18 @@ export default function Navbar() {
     { name: "الرئيسية", href: "#heroSection" },
     { name: "من نحن", href: "#aboutPlatform" },
     { name: "الكورسات", href: "#courses" },
-    { name: "تواصل معنا", href: "#contact" },
+    { name: "آراء طلابنا", href: "#StudentOpinions" },
+    { name: "تواصل معنا", href: "#footer" },
   ];
+
+  // دالة التعامل مع الانتقال وإغلاق القائمة في الجوال
+  const handleScrollTo = (href) => {
+    setIsOpen(false);
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     // Nav Links Start
@@ -90,16 +100,16 @@ export default function Navbar() {
 
         {/* Navbar Mobiles Start*/}
         <div
-          className={`md:hidden bg-gradient-to-b backdrop-blur-sm bg-black/25 border-t-1 border-white transition-all duration-300 ease-in-out ${
+          className={`lg:hidden bg-gradient-to-b backdrop-blur-sm bg-black/25 border-t-1 border-white transition-all duration-300 ease-in-out ${
             isOpen
-              ? "max-h-auto opacity-100 pb-5 pt-3 pointer-events-auto"
-              : "max-h-0 opacity-0 py-0 pointer-events-none"
+              ? "h-auto opacity-100 pb-5 pt-3 pointer-events-auto"
+              : "max-h-0 opacity-0 py-0 pointer-events-none overflow-hidden"
           }`}
         >
           {navLinks.map((link) => (
             <button
               key={link.name}
-              onClick={() => scrollToSection(link.href)}
+              onClick={() => handleScrollTo(link.href)}
               className="block w-full text-right px-4 py-[17px] text-warm-white font-bold hover:text-gold hover:bg-black/25 transition-colors bg-transparent"
             >
               {link.name}
@@ -107,12 +117,14 @@ export default function Navbar() {
           ))}
           <Link
             to="/login"
+            onClick={() => setIsOpen(false)}
             className="block mx-4 mb-6 mt-4 border-2 border-[#D4AF37] text-white font-bold px-6 py-3 rounded-lg text-center hover:bg-[#D4AF37] transition-colors"
           >
             تسجيل الدخول
           </Link>
           <Link
             to="/signup"
+            onClick={() => setIsOpen(false)}
             className="block mx-4 mt-4 bg-[#D4AF37] text-white font-bold px-6 py-3.5 rounded-lg text-center hover:bg-[#B8941F] transition-colors"
           >
             انشاء حساب

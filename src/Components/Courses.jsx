@@ -50,7 +50,7 @@ const courses = [
 export default function LatestCourses() {
   return (
     <section id="courses" dir="rtl" className="bg-charcoal  py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl">
         {/*   Heading Start */}
         <div className="text-center mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-warm-white mb-4">
@@ -64,11 +64,11 @@ export default function LatestCourses() {
         {/*   Heading End */}
 
         {/*  Courses Start */}
-        <div className="bg-midnight  grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:mx-0 mx-[15px]">
           {courses.map((course) => (
             <div
               key={course.id}
-              className="group bg-midnightي border border-border-navy rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer hover:scale-[1.01] hover:border-gold hover:shadow-[0_20px_45px_rgba(212,175,55,0.2)] flex flex-col h-full"
+              className="group bg-midnight border border-border-navy rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer hover:scale-[1.01] hover:border-gold hover:shadow-[0_20px_45px_rgba(212,175,55,0.2)] flex flex-col h-full"
             >
               {/*  Course Image Start  */}
               <div className="relative aspect-video overflow-hidden bg-midnight">
@@ -98,7 +98,7 @@ export default function LatestCourses() {
               {/*  Course Image End  */}
 
               {/*  Course Content Start */}
-              <div className="p-6 flex flex-col flex-1">
+              <div className="p-6 flex flex-col flex-1 bg-midnight">
                 <h3 className="text-xl sm:text-2xl font-bold text-warm-white mb-4 leading-8">
                   {course.title}
                 </h3>

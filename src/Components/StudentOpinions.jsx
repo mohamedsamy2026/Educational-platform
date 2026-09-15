@@ -37,6 +37,7 @@ export default function Testimonials() {
   return (
     <section
       dir="rtl"
+      id="StudentOpinions"
       className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8"
     >
       {/* ================= Background Start ================= */}

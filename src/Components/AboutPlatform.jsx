@@ -47,7 +47,7 @@ export default function AboutPlatform() {
             نعمل على تقديم تجربة تعليمية مميزه تساعدك على فهم التاريخ بسهولة
           </h2>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* ================= Card 1 ================= */}
           <div
             className="
